@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\Expense;
+use App\Models\Project;
+use App\Models\Supplier;
+use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Requests\StoreExpenseRequest;
 use App\Http\Requests\UpdateExpenseRequest;
+use App\Models\User;
 
 class ExpenseController extends Controller
 {
@@ -38,9 +43,15 @@ class ExpenseController extends Controller
     {
         $expense = new Expense();
 
-        $expense->reference = $request->reference;
-        $expense->name = $request->name;
+        $expense->number_reference = $request->number_reference;
+        //$expense->name = $request->name;
         $expense->amount = $request->amount;
+        $expense->project_id = $request->project;
+        $expense->article_id = $request->article;
+        $expense->supplier_id = $request->supplier;
+        $expense->user_id = $request->user;
+        $expense->observation = $request->observation;
+        $expense->tva = $request->tva;
 
         if ($expense->save()) {
             Alert::toast('Enregistrement effectue', 'success');
@@ -75,9 +86,15 @@ class ExpenseController extends Controller
      */
     public function update(UpdateExpenseRequest $request, Expense $expense)
     {
-        $expense->reference = $request->reference;
-        $expense->name = $request->name;
+        $expense->number_reference = $request->number_reference;
+        //$expense->name = $request->name;
         $expense->amount = $request->amount;
+        $expense->project_id = $request->project;
+        $expense->article_id = $request->article;
+        $expense->supplier_id = $request->supplier;
+        $expense->user_id = $request->user;
+        $expense->observation = $request->observation;
+        $expense->tva = $request->tva;
         
         if ($expense->save()) {
             Alert::toast('Modification éffectée', 'success');
@@ -103,9 +120,14 @@ class ExpenseController extends Controller
     private function expense_columns()
     {
         $columns = (object) [
-            'reference' => 'Réference',
-            'name' => 'Nom',
+            'number_reference' => 'Réference',
+            'observation' => 'Observation',
             'amount' => 'Montant',
+            'tva' => 'tva',
+            'project' => 'project',
+            'article' => 'article',
+            'user' => 'Personnel',
+            'supplier' => 'Fournisseur',
         ];
         return $columns;
     }
@@ -122,17 +144,41 @@ class ExpenseController extends Controller
     private function expense_fields()
     {
         $fields = [
-            'name' => [
-                'title' => 'Nom',
-                'field' => 'text'
-            ],
-            'reference' => [
-                'title' => 'Référence',
+            'number_reference' => [
+                'title' => 'Numero Référence',
                 'field' => 'text'
             ],            
+            'article' => [
+                'title' => 'Article',
+                'field' => 'model',
+                'options' => Article::all('id', 'name'),
+            ],
             'amount' => [
-                'title' => 'Montant',
+                'title' => 'PU',
                 'field' => 'number'
+            ],         
+            'tva' => [
+                'title' => 'TVA',
+                'field' => 'number'
+            ],         
+            'observation' => [
+                'title' => 'Observation',
+                'field' => 'textarea'
+            ],         
+            'project' => [
+                'title' => 'Projet',
+                'field' => 'model',
+                'options' => Project::all('id', 'name'),
+            ],
+            'supplier' => [
+                'title' => 'Fournissaeur',
+                'field' => 'model',
+                'options' => Supplier::all('id', 'name'),
+            ],
+            'user' => [
+                'title' => 'Nom du Personnel',
+                'field' => 'model',
+                'options' => User::all('id', 'name'),
             ],
         ];
         return $fields;

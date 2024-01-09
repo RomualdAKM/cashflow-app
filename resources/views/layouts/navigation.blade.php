@@ -103,7 +103,7 @@
 <div class="mobile-menu md:hidden">
     <div class="mobile-menu-bar">
         <a href="#" class="flex mr-auto">
-            <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="dist/images/logo.svg">
+            <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="/gest-caisse.jpg">
         </a>
         <a href="javascript:;" id="mobile-menu-toggler"> <i data-feather="bar-chart-2"
                 class="w-8 h-8 text-white transform -rotate-90"></i> </a>
@@ -265,6 +265,44 @@
                 </li>
             </ul>
         </li>
+        <li>
+            <a href="javascript:;"
+                @if (request()->routeIs('article.*')) class="menu menu--active"
+                @else
+                class="menu" @endif>
+                <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
+                    </svg>
+                </div>
+                <div class="menu__title"> Articles <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+            </a>
+            <ul class="">
+                <li>
+                    <a href="{{ route('article.index') }}" class="menu">
+                        <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                            </svg>
+                        </div>
+                        <div class="menu__title"> Listes </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('article.create') }}" class="menu">
+                        <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                        </div>
+                        <div class="menu__title"> Ajouter </div>
+                    </a>
+                </li>
+            </ul>
+        </li>
     </ul>
 </div>
 <!-- END: Mobile Menu -->
@@ -273,14 +311,14 @@
     <div class="top-bar-boxed flex items-center">
         <!-- BEGIN: Logo -->
         <a href="#" class="-intro-x hidden md:flex">
-            <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="dist/images/logo.svg">
-            <span class="text-white text-lg ml-3"> Mid<span class="font-medium">one</span> </span>
+            <img alt="" class="w-6" src="/gest-caisse.jpg">
+            <span class="text-white text-lg ml-3"> Gest<span class="font-medium">Caisse</span> </span>
         </a>
         <!-- END: Logo -->
         <!-- BEGIN: Breadcrumb -->
         <div class="-intro-x breadcrumb breadcrumb--light mr-auto"> <a href="#" class="">Application</a>
             <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="#"
-                class="breadcrumb--active">Dashboard</a>
+                class="breadcrumb--active">Gestion Caisse</a>
         </div>
         <!-- END: Breadcrumb -->
         <!-- BEGIN: Search -->
@@ -393,7 +431,7 @@
         </div> --}}
         <!-- END: Search -->
         <!-- BEGIN: Notifications -->
-        <div class="intro-x dropdown mr-4 sm:mr-6">
+        {{-- <div class="intro-x dropdown mr-4 sm:mr-6">
             <div class="dropdown-toggle notification notification--light notification--bullet cursor-pointer"> <i
                     data-feather="bell" class="notification__icon dark:text-gray-300"></i> </div>
             <div class="notification-content pt-2 dropdown-box">
@@ -419,12 +457,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- END: Notifications -->
         <!-- BEGIN: Account Menu -->
         <div class="intro-x dropdown w-8 h-8">
             <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in scale-110">
-                <img alt="Midone Tailwind HTML Admin Template" src="dist/images/profile-13.jpg">
+                <img alt="" src="/gest-caisse.jpg">
             </div>
             <div class="dropdown-box w-56">
                 <div class="dropdown-box__content box bg-theme-38 dark:bg-dark-6 text-white">
@@ -613,6 +651,45 @@
                 </li>
                 <li>
                     <a href="{{ route('project.index') }}" class="top-menu">
+                        <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                            </svg>
+                        </div>
+                        <div class="top-menu__title"> Listes </div>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;"
+                @if (request()->routeIs('article.*')) class="top-menu top-menu--active"
+                @else
+                class="top-menu" @endif>
+                <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
+                    </svg>
+                </div>
+                <div class="top-menu__title"> Articles <i data-feather="chevron-down" class="top-menu__sub-icon"></i>
+                </div>
+            </a>
+            <ul class="">
+                <li>
+                    <a href="{{ route('article.create') }}" class="top-menu">
+                        <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                        </div>
+                        <div class="top-menu__title"> Ajouter </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('article.index') }}" class="top-menu">
                         <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"

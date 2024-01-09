@@ -13,9 +13,15 @@ return new class extends Migration
     {
         Schema::create('expenses', function (Blueprint $table) {
             $table->id();            
-            $table->string('reference');
-            $table->string('name');
-            $table->string('amount');
+            $table->string('number_reference');
+            $table->foreignId('project_id')->onDelete('cascade')->constrained();
+            $table->foreignId('supplier_id')->onDelete('cascade')->constrained();
+            $table->foreignId('user_id')->onDelete('cascade')->constrained();
+            $table->foreignId('article_id')->onDelete('cascade')->constrained();
+            $table->text('observation')->nullable();
+            $table->string('amount')->nullable();
+            $table->string('total')->nullable();
+            $table->string('tva')->nullable();
             $table->timestamps();
         });
     }

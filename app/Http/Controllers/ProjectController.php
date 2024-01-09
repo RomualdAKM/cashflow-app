@@ -40,8 +40,8 @@ class ProjectController extends Controller
 
         $project->reference = $request->reference;
         $project->name = $request->name;
-        $project->contact = $request->contact;
-        $project->address = $request->address;
+        $project->start_date = $request->start_date;
+        $project->end_date = $request->end_date;
 
         if ($project->save()) {
             Alert::toast('Enregistrement effectue', 'success');
@@ -78,8 +78,8 @@ class ProjectController extends Controller
     {
         $project->reference = $request->reference;
         $project->name = $request->name;
-        $project->contact = $request->contact;
-        $project->address = $request->address;
+        $project->start_date = $request->start_date;
+        $project->end_date = $request->end_date;
         
         if ($project->save()) {
             Alert::toast('Modification éffectée', 'success');
@@ -107,8 +107,8 @@ class ProjectController extends Controller
         $columns = (object) [
             'reference' => 'Réference',
             'name' => 'Nom',
-            'contact' => 'Contact',
-            'address' => 'Adresse',
+            'start_date' => 'Date de debut',
+            'end_date' => 'Date de fin',
         ];
         return $columns;
     }

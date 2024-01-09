@@ -5,18 +5,18 @@
                 <div class="p-6 text-gray-900">
                     <div class="flex justify-between">
                         <h1 class="font-bold text-lg my-2">
-                            {{ __('Listes') }}
+                            Listes des articles
                         </h1>
 
-                        <a href="{{ route('expense.create') }}">
+                        <a href="{{ route('article.create') }}">
                             <x-primary-button>
-                                {{ __('Nouvelle dépense') }}
+                                {{ __('Nouveau article') }}
                             </x-primary-button>
                         </a>
                     </div>
 
                     <div class="mt-4">
-                        <x-tables.default :resources="$expenses" :mattributes="$my_attributes" type="expense" :mactions="$my_actions" />
+                        <x-tables.default :resources="$articles" :mattributes="$my_attributes" type="article" :mactions="$my_actions" />
                     </div>
                 </div>
             </div>

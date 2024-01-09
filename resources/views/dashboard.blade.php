@@ -23,9 +23,9 @@
                                     <div class="box p-5">
                                         <div class="flex">
                                             <i data-feather="user" class="report-box__icon text-theme-10"></i> 
-                                            <div class="ml-auto">
+                                            {{-- <div class="ml-auto">
                                                 <div class="report-box__indicator bg-theme-9 tooltip cursor-pointer" title="33% Higher than last month"> 33% <i data-feather="chevron-up" class="w-4 h-4"></i> </div>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         <div class="text-3xl font-bold leading-8 mt-6">{{ $users }}</div>
                                         <div class="text-base text-gray-600 mt-1">Utilisateurs</div>
@@ -37,9 +37,9 @@
                                     <div class="box p-5">
                                         <div class="flex">
                                             <i data-feather="credit-card" class="report-box__icon text-theme-11"></i> 
-                                            <div class="ml-auto">
+                                            {{-- <div class="ml-auto">
                                                 <div class="report-box__indicator bg-theme-6 tooltip cursor-pointer" title="2% Lower than last month"> 2% <i data-feather="chevron-down" class="w-4 h-4"></i> </div>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         <div class="text-3xl font-bold leading-8 mt-6">{{ $suppliers }}</div>
                                         <div class="text-base text-gray-600 mt-1">Fournisseurs</div>
@@ -51,9 +51,9 @@
                                     <div class="box p-5">
                                         <div class="flex">
                                             <i data-feather="monitor" class="report-box__icon text-theme-12"></i> 
-                                            <div class="ml-auto">
+                                            {{-- <div class="ml-auto">
                                                 <div class="report-box__indicator bg-theme-9 tooltip cursor-pointer" title="12% Higher than last month"> 12% <i data-feather="chevron-up" class="w-4 h-4"></i> </div>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         <div class="text-3xl font-bold leading-8 mt-6">{{ $projects }}</div>
                                         <div class="text-base text-gray-600 mt-1">Projets</div>
@@ -65,9 +65,9 @@
                                     <div class="box p-5">
                                         <div class="flex">
                                             <i data-feather="shopping-cart" class="report-box__icon text-theme-10"></i> 
-                                            <div class="ml-auto">
+                                            {{-- <div class="ml-auto">
                                                 <div class="report-box__indicator bg-theme-9 tooltip cursor-pointer" title="22% Higher than last month"> 22% <i data-feather="chevron-up" class="w-4 h-4"></i> </div>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                         <div class="text-3xl font-bold leading-8 mt-6">{{ $expenses }}</div>
                                         <div class="text-base text-gray-600 mt-1">Dépenses</div>

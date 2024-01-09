@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
@@ -19,19 +20,21 @@ use App\Http\Controllers\SupplierController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/', HomeController::class);
     Route::get('dashboard', HomeController::class)->name('dashboard');
     Route::resource('project', ProjectController::class);
     Route::resource('expense', ExpenseController::class);
     Route::resource('supplier', SupplierController::class);
+    Route::resource('article', ArticleController::class);
     Route::resource('user', UserController::class);
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
