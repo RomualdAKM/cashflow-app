@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ArticleController;
@@ -27,7 +28,18 @@ use App\Http\Controllers\SupplierController;
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/migrate', function () {
+    Artisan::call('migrate');
+    dd('migrated!');
+});
 
+Route::get('reboot', function () {
+    Artisan::call('view:clear');
+    Artisan::call('route:clear');
+    Artisan::call('config:clear');
+    Artisan::call('cache:clear');
+    dd('All done!');
+});
 Route::middleware('auth')->group(function () {
     Route::get('/', HomeController::class);
     Route::get('dashboard', HomeController::class)->name('dashboard');
