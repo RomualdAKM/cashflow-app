@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Article;
 use App\Models\Expense;
 use App\Models\Project;
 use App\Models\Supplier;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Requests\StoreExpenseRequest;
 use App\Http\Requests\UpdateExpenseRequest;
-use App\Models\User;
 
 class ExpenseController extends Controller
 {
@@ -183,4 +184,31 @@ class ExpenseController extends Controller
         ];
         return $fields;
     }
+
+    public function validexpense(){
+        return view('app.expense.valide',[
+            'expenses' => Expense::all(),
+            // 'my_actions' => $this->expense_actions(),
+            // 'my_attributes' => $this->expense_columns(),
+        ]);
+    }
+
+    public function isvalidexpense(Request $request){
+       // dd($request->valide);
+       $expense = Expense::find($request->valide);
+       $expense->is_valide = "validée";
+       $expense->save();
+       Alert::toast('Depense validée avec succé', 'success');
+       return redirect()->back();
+    }
+
+    public function isnotvalidexpense(Request $request){
+       // dd($request->valide);
+       $expense = Expense::find($request->not_valide);
+       $expense->is_valide = "refusée";
+       $expense->save();
+       Alert::toast('Depense refusée avec succé', 'success');
+       return redirect()->back();
+    }
+
 }

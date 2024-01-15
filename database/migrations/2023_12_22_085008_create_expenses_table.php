@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreignId('article_id')->onDelete('cascade')->constrained();
             $table->text('observation')->nullable();
             $table->string('amount')->nullable();
+            $table->string('is_valide')->default('En attente');
             $table->string('total')->nullable();
             $table->string('tva')->nullable();
             $table->timestamps();

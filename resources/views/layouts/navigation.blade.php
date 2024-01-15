@@ -154,57 +154,35 @@
                         <div class="menu__title"> Ajouter </div>
                     </a>
                 </li>
-            </ul>
-        </li>
-        <li>
-            <a href="javascript:;"
-                @if (request()->routeIs('user.*')) class="menu menu--active"
-                @else
-                class="menu" @endif>
-                <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                    </svg>
-                </div>
-                <div class="menu__title"> Employés <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
-            </a>
-            <ul class="">
                 <li>
-                    <a href="{{ route('user.index') }}" class="menu">
-                        <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
-                            </svg>
-                        </div>
-                        <div class="menu__title"> Listes </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('user.create') }}" class="menu">
+                    <a href="{{ route('valide.validexpense') }}" class="menu">
                         <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                             </svg>
                         </div>
-                        <div class="menu__title"> Ajouter </div>
+                        <div class="menu__title"> Etat des Depenses </div>
                     </a>
                 </li>
             </ul>
         </li>
         <li>
             <a href="javascript:;"
-                @if (request()->routeIs('supplier.*')) class="menu menu--active"
+                @if (request()->routeIs('caisse.*')) class="menu menu--active"
                 @else
                 class="menu" @endif>
-                <div class="menu__icon"> <i data-feather="box"></i> </div>
-                <div class="menu__title"> Fournisseurs <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                    </svg>
+                </div>
+                <div class="menu__title"> Approvisionnement <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
             </a>
             <ul class="">
                 <li>
-                    <a href="{{ route('supplier.index') }}" class="menu">
+                    <a href="{{ route('caisse.index') }}" class="menu">
                         <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -215,7 +193,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('supplier.create') }}" class="menu">
+                    <a href="{{ route('caisse.create') }}" class="menu">
                         <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -225,81 +203,170 @@
                         <div class="menu__title"> Ajouter </div>
                     </a>
                 </li>
+              
             </ul>
         </li>
         <li>
             <a href="javascript:;"
-                @if (request()->routeIs('project.*')) class="menu menu--active"
-                @else
-                class="menu" @endif>
+                {{-- @if (request()->routeIs('expense.*')) class="menu menu--active"
+                @else --}}
+                class="menu" {{-- @endif--}}>
                 <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
+                            d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
                     </svg>
                 </div>
-                <div class="menu__title"> Projets <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                <div class="menu__title"> Parametre <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
             </a>
             <ul class="">
+              
                 <li>
-                    <a href="{{ route('project.index') }}" class="menu">
-                        <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <a href="javascript:;"
+                        @if (request()->routeIs('user.*')) class="menu menu--active"
+                        @else
+                        class="menu" @endif>
+                        <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                             </svg>
                         </div>
-                        <div class="menu__title"> Listes </div>
+                        <div class="menu__title"> Employés <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
                     </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{ route('user.index') }}" class="menu">
+                                <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                                    </svg>
+                                </div>
+                                <div class="menu__title"> Listes </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('user.create') }}" class="menu">
+                                <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                </div>
+                                <div class="menu__title"> Ajouter </div>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="{{ route('project.create') }}" class="menu">
-                        <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                            </svg>
-                        </div>
-                        <div class="menu__title"> Ajouter </div>
+                    <a href="javascript:;"
+                        @if (request()->routeIs('supplier.*')) class="menu menu--active"
+                        @else
+                        class="menu" @endif>
+                        <div class="menu__icon"> <i data-feather="box"></i> </div>
+                        <div class="menu__title"> Fournisseurs <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
                     </a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="javascript:;"
-                @if (request()->routeIs('article.*')) class="menu menu--active"
-                @else
-                class="menu" @endif>
-                <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
-                    </svg>
-                </div>
-                <div class="menu__title"> Articles <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
-            </a>
-            <ul class="">
-                <li>
-                    <a href="{{ route('article.index') }}" class="menu">
-                        <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                            </svg>
-                        </div>
-                        <div class="menu__title"> Listes </div>
-                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{ route('supplier.index') }}" class="menu">
+                                <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                    </svg>
+                                </div>
+                                <div class="menu__title"> Listes </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('supplier.create') }}" class="menu">
+                                <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                </div>
+                                <div class="menu__title"> Ajouter </div>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="{{ route('article.create') }}" class="menu">
-                        <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <a href="javascript:;"
+                        @if (request()->routeIs('project.*')) class="menu menu--active"
+                        @else
+                        class="menu" @endif>
+                        <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
                             </svg>
                         </div>
-                        <div class="menu__title"> Ajouter </div>
+                        <div class="menu__title"> Projets <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
                     </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{ route('project.index') }}" class="menu">
+                                <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                    </svg>
+                                </div>
+                                <div class="menu__title"> Listes </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('project.create') }}" class="menu">
+                                <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                </div>
+                                <div class="menu__title"> Ajouter </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;"
+                        @if (request()->routeIs('article.*')) class="menu menu--active"
+                        @else
+                        class="menu" @endif>
+                        <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
+                            </svg>
+                        </div>
+                        <div class="menu__title"> Articles <i data-feather="chevron-down" class="menu__sub-icon"></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{ route('article.index') }}" class="menu">
+                                <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                    </svg>
+                                </div>
+                                <div class="menu__title"> Listes </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('article.create') }}" class="menu">
+                                <div class="menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                </div>
+                                <div class="menu__title"> Ajouter </div>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </li>
@@ -534,98 +601,245 @@
                 </li>
                 <li>
                     <a href="{{ route('expense.index') }}" class="top-menu">
-                        <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        <div class="top-menu__icon"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
                             </svg>
                         </div>
                         <div class="top-menu__title"> Listes </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('valide.validexpense') }}" class="top-menu">
+                        <div class="top-menu__icon"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                            </svg>
+                        </div>
+                        <div class="top-menu__title"> Etat des Depenses </div>
                     </a>
                 </li>
             </ul>
         </li>
         <li>
             <a href="javascript:;"
-                @if (request()->routeIs('user.*')) class="top-menu top-menu--active"
-                @else
-                class="top-menu" @endif>
+                {{-- @if (request()->routeIs('expense.*')) class="top-menu top-menu--active"
+                @else --}}
+                class="top-menu" {{-- @endif --}}>
                 <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
                     </svg>
                 </div>
-                <div class="top-menu__title"> Employés <i data-feather="chevron-down" class="top-menu__sub-icon"></i>
+                <div class="top-menu__title"> Parametre <i data-feather="chevron-down" class="top-menu__sub-icon"></i>
                 </div>
             </a>
             <ul class="">
                 <li>
-                    <a href="{{ route('user.create') }}" class="top-menu">
+                    <a href="javascript:;"
+                        @if (request()->routeIs('user.*')) class="top-menu top-menu--active"
+                        @else
+                        class="top-menu" @endif>
                         <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                             </svg>
                         </div>
-                        <div class="top-menu__title"> Ajouter </div>
+                        <div class="top-menu__title"> Employés <i data-feather="chevron-down" class="top-menu__sub-icon"></i>
+                        </div>
                     </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{ route('user.create') }}" class="top-menu">
+                                <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                </div>
+                                <div class="top-menu__title"> Ajouter </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('user.index') }}" class="top-menu">
+                                <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                    </svg>
+                                </div>
+                                <div class="top-menu__title"> Listes </div>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="{{ route('user.index') }}" class="top-menu">
+                    <a href="javascript:;"
+                        @if (request()->routeIs('supplier.*')) class="top-menu top-menu--active"
+                        @else
+                        class="top-menu" @endif>
                         <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                    d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
                             </svg>
                         </div>
-                        <div class="top-menu__title"> Listes </div>
+                        <div class="top-menu__title"> Fournisseurs <i data-feather="chevron-down"
+                                class="top-menu__sub-icon"></i> </div>
                     </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{ route('supplier.create') }}" class="top-menu">
+                                <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                </div>
+                                <div class="top-menu__title"> Ajouter </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('supplier.index') }}" class="top-menu">
+                                <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                    </svg>
+                                </div>
+                                <div class="top-menu__title"> Listes </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;"
+                        @if (request()->routeIs('project.*')) class="top-menu top-menu--active"
+                        @else
+                        class="top-menu" @endif>
+                        <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
+                            </svg>
+                        </div>
+                        <div class="top-menu__title"> Projets <i data-feather="chevron-down" class="top-menu__sub-icon"></i>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{ route('project.create') }}" class="top-menu">
+                                <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                </div>
+                                <div class="top-menu__title"> Ajouter </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('project.index') }}" class="top-menu">
+                                <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                    </svg>
+                                </div>
+                                <div class="top-menu__title"> Listes </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;"
+                        @if (request()->routeIs('article.*')) class="top-menu top-menu--active"
+                        @else
+                        class="top-menu" @endif>
+                        <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
+                            </svg>
+                        </div>
+                        <div class="top-menu__title"> Articles <i data-feather="chevron-down" class="top-menu__sub-icon"></i>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{ route('article.create') }}" class="top-menu">
+                                <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                </div>
+                                <div class="top-menu__title"> Ajouter </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('article.index') }}" class="top-menu">
+                                <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                    </svg>
+                                </div>
+                                <div class="top-menu__title"> Listes </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;"
+                        @if (request()->routeIs('paymentmode.*')) class="top-menu top-menu--active"
+                        @else
+                        class="top-menu" @endif>
+                        <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
+                            </svg>
+                        </div>
+                        <div class="top-menu__title"> Type Operation  <i data-feather="chevron-down" class="top-menu__sub-icon"></i>
+                        </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{ route('paymentmode.create') }}" class="top-menu">
+                                <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                </div>
+                                <div class="top-menu__title"> Ajouter </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('paymentmode.index') }}" class="top-menu">
+                                <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                                    </svg>
+                                </div>
+                                <div class="top-menu__title"> Listes </div>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </li>
         <li>
             <a href="javascript:;"
-                @if (request()->routeIs('supplier.*')) class="top-menu top-menu--active"
-                @else
-                class="top-menu" @endif>
-                <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
-                    </svg>
-                </div>
-                <div class="top-menu__title"> Fournisseurs <i data-feather="chevron-down"
-                        class="top-menu__sub-icon"></i> </div>
-            </a>
-            <ul class="">
-                <li>
-                    <a href="{{ route('supplier.create') }}" class="top-menu">
-                        <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                            </svg>
-                        </div>
-                        <div class="top-menu__title"> Ajouter </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('supplier.index') }}" class="top-menu">
-                        <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                            </svg>
-                        </div>
-                        <div class="top-menu__title"> Listes </div>
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="javascript:;"
-                @if (request()->routeIs('project.*')) class="top-menu top-menu--active"
+                @if (request()->routeIs('caisse.*')) class="top-menu top-menu--active"
                 @else
                 class="top-menu" @endif>
                 <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -634,12 +848,12 @@
                             d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
                     </svg>
                 </div>
-                <div class="top-menu__title"> Projets <i data-feather="chevron-down" class="top-menu__sub-icon"></i>
+                <div class="top-menu__title"> Approvisionnement <i data-feather="chevron-down" class="top-menu__sub-icon"></i>
                 </div>
             </a>
             <ul class="">
                 <li>
-                    <a href="{{ route('project.create') }}" class="top-menu">
+                    <a href="{{ route('caisse.create') }}" class="top-menu">
                         <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -650,46 +864,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('project.index') }}" class="top-menu">
-                        <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-                            </svg>
-                        </div>
-                        <div class="top-menu__title"> Listes </div>
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="javascript:;"
-                @if (request()->routeIs('article.*')) class="top-menu top-menu--active"
-                @else
-                class="top-menu" @endif>
-                <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
-                    </svg>
-                </div>
-                <div class="top-menu__title"> Articles <i data-feather="chevron-down" class="top-menu__sub-icon"></i>
-                </div>
-            </a>
-            <ul class="">
-                <li>
-                    <a href="{{ route('article.create') }}" class="top-menu">
-                        <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                            </svg>
-                        </div>
-                        <div class="top-menu__title"> Ajouter </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ route('article.index') }}" class="top-menu">
+                    <a href="{{ route('caisse.index') }}" class="top-menu">
                         <div class="top-menu__icon"> <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round"

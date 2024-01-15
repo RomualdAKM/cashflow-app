@@ -4,11 +4,13 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CaisseController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\PaymentModeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,8 +49,13 @@ Route::middleware('auth')->group(function () {
     Route::resource('expense', ExpenseController::class);
     Route::resource('supplier', SupplierController::class);
     Route::resource('article', ArticleController::class);
+    Route::resource('paymentmode', PaymentModeController::class);
+    Route::resource('caisse', CaisseController::class);
     Route::resource('user', UserController::class);
 
+    Route::get('/valide', [ExpenseController::class, 'validexpense'])->name('valide.validexpense');
+    Route::post('/valide', [ExpenseController::class, 'isvalidexpense'])->name('valide.isvalidexpense');
+    Route::post('/notvalide', [ExpenseController::class, 'isnotvalidexpense'])->name('notvalide.isnotvalidexpense');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

@@ -87,6 +87,13 @@
                         <x-input-label for="{{ $attr }}" value="{!! $value['title'] !!}" class="ml-3">
                         </x-input-label>
                     </div>
+                @elseif ($value['field'] === 'date')
+                <x-input-label for="{{ $attr }}" value="{!! $value['title'] !!}"></x-input-label>
+
+                    <div class="flex items-center">
+                        <x-dynamic-component :component="$component" id="{{ $attr }}" name="{{ $attr }}"
+                            type="{{ $value['field'] }}" value="{{ date('Y-m-d') }}" class="block mt-1 w-full border-2 p-2 rounded outline-0" />
+                    </div>
                 @else
                     <x-input-label for="{{ $attr }}" value="{!! $value['title'] !!}"></x-input-label>
 
